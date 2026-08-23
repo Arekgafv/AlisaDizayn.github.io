@@ -1,0 +1,101 @@
+/* ==========================================================================
+			    6. БЛОК: MAIN-FOOTER (Нижняя панель с кнопкой)
+			    ========================================================================== */
+/* .main-footer {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5vh 16px;
+	width: 100%;
+	z-index: 10;
+}
+
+.save-contact-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	max-width: 420px;
+	padding: clamp(12px, 1.8vh, 18px) clamp(20px, 6vw, 36px);
+	border: none;
+	border-radius: 100px;
+	background: var(--brand-bg-gradient);
+	cursor: pointer;
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.3s;
+	box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2);
+	outline: none;
+}
+
+.save-contact-btn:active {
+	transform: scale(0.97);
+}
+
+.save-contact-btn--clicked {
+	background: var(--tg-theme-hint-color) !important;
+	box-shadow: none;
+	transform: none;
+	cursor: default;
+	pointer-events: none;
+}
+
+.save-contact-btn__svg {
+	width: 100%;
+	height: auto;
+	max-height: clamp(35px, 6vh, 55px);
+	display: block;
+	min-width: 100px;
+} */
+
+/* ==========================================================================
+			    6. БЛОК: MAIN-FOOTER (Нижняя панель с кнопкой)
+			    ========================================================================== */
+.main-footer {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5vh 16px;
+	width: 100%;
+	z-index: 10;
+}
+
+.save-contact-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	max-width: 420px;
+	padding: clamp(12px, 1.8vh, 18px) clamp(20px, 6vw, 36px);
+	border: none;
+	border-radius: 100px;
+	background: var(--brand-bg-gradient);
+	cursor: pointer;
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.3s;
+	box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2);
+	outline: none;
+}
+
+.save-contact-btn:active {
+	transform: scale(0.97);
+}
+
+/* Состояние после нажатия: меняем цвет фона на серый */
+.save-contact-btn--added {
+	background: var(--tg-theme-hint-color, #708499) !important;
+	box-shadow: none;
+	/* Оставляем кликабельной! */
+	pointer-events: auto;
+}
+
+.save-contact-btn__svg {
+	width: 100%;
+	height: auto;
+	max-height: clamp(35px, 6vh, 55px);
+	display: block;
+	min-width: 100px;
+}

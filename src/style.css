@@ -1,0 +1,106 @@
+@import "./components/Header/Header.css";
+@import "./components/Main/Slider.css";
+@import "./components/Footer/btn-SaveContact.css";
+@import "./components/ModalBottom/QR-code.css";
+/* ==========================================================================
+			    1. ПЕРЕМЕННЫЕ И ОБЩИЕ СТИЛИ (Root & Reset)
+			    ========================================================================== */
+:root {
+	font-size: 62.5%;
+	--white: #ffffff;
+	--tg-theme-bg-color: #ffffff;
+	--tg-theme-text-color: #1a1a2e;
+	--tg-theme-hint-color: #8e8e93;
+	--tg-theme-button-color: #2481cc;
+	--tg-theme-secondary-bg-color: #f4f4f7;
+
+	--brand-gradient-start: rgb(0, 0, 59);
+	--brand-gradient-end: rgb(0, 102, 255);
+	--brand-bg-gradient: linear-gradient(
+		to bottom,
+		var(--brand-gradient-start) 0%,
+		var(--brand-gradient-end) 100%
+	);
+	--brand-stroke-width: 10px;
+
+	--circle-size: clamp(4.8rem, 12vw, 7.2rem);
+	--actions-gap: clamp(1.2rem, 3.5vw, 2.5rem);
+
+	--slide-text-color: #000066;
+	--slide-border-color: var(--tg-theme-hint-color);
+	--slider-bg: var(--tg-theme-bg-color);
+
+	--pag-border-color: var(--tg-theme-button-color);
+	--pag-active-color: var(--tg-theme-button-color);
+	--arrow-bg-color: var(--tg-theme-hint-color);
+	--arrow-icon-color: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--tg-theme-bg-color: #121214;
+		--tg-theme-text-color: #f5f5f7;
+		--tg-theme-hint-color: #a1a1a6;
+		--tg-theme-button-color: #2481cc;
+		--tg-theme-secondary-bg-color: #1e1e24;
+		--slide-text-color: var(--tg-theme-text-color);
+	}
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+	background-color: var(--tg-theme-bg-color);
+	color: var(--tg-theme-text-color);
+	-webkit-user-select: none;
+	user-select: none;
+	padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
+	display: flex;
+	flex-direction: column;
+	height: 100dvh;
+}
+
+/* ==========================================================================
+			    2. БЛОК: APP-LAYOUT (Оболочка приложения)
+			    ========================================================================== */
+.app-layout {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.app-layout__canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+/* Header */
+/* Main */
+/* Footer */
+/* QR-code */
